@@ -21,7 +21,7 @@ Beewolf is a PowerShell (Version 7/5/2) script that exploits the HiveNightmare (
 
 Beewolf copies the Windows 10 (other versions untested) [Security Account Manager](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc756748(v=ws.10)?redirectedfrom=MSDN) database to another filepath for your viewing pleasure. It does so by using symbolic links and some slight of hand with variables. They say a picture is worth a thousand words.
 
-
+<a href="https://ibb.co/rGZCdZH"><img src="https://i.ibb.co/4Zj61jp/image.jpg" alt="image" border="0"></a>
 
 ## Installation / Usage
 
