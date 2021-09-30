@@ -10,21 +10,35 @@ Beewolf is a PowerShell (Version 7/5/2) script that exploits the HiveNightmare (
 
 ## Table of contents
 
-1. About
-2. Installation /usage
-3. Credits
-4. Disclaimer / Warning
-5. Credits
-6. License
+1. [About](https://github.com/Operational-Sciences-Group/Project-Beewolf#about)
+2. [Installation /usage](https://github.com/Operational-Sciences-Group/Project-Beewolf#installation--usage)
+3. [Disclaimer / Warning](https://github.com/Operational-Sciences-Group/Project-Beewolf#disclaimer--warning)
+4. [Credits](https://github.com/Operational-Sciences-Group/Project-Beewolf#credits)
+5. [License](https://github.com/Operational-Sciences-Group/Project-Beewolf#license)
 
 ## About
 
-Beewolf copies the Windows 10 (other versions untested) [Security Account Manager](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc756748(v=ws.10)?redirectedfrom=MSDN) database to another filepath for your viewing pleasure. It does so by using symbolic links and some slight of hand with variables. They say a picture is worth a thousand words.
+Beewolf copies the Windows 10 (other versions untested) [Security Account Manager](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc756748(v=ws.10)?redirectedfrom=MSDN) database to $env:PUBLIC (or another filepath) for your viewing pleasure. It does so by using symbolic links and some slight of hand with variables. They say a picture is worth a thousand words.
 
 <a href="https://ibb.co/rGZCdZH"><img src="https://i.ibb.co/4Zj61jp/image.jpg" alt="image" border="0"></a>
 
 ## Installation / Usage
 
+**Install using PowerShell Version 3 or later**
+
+Installation:
+
+1. Navigate to the desired install path:
+
+&emsp;```Set-Location <install\path>```
+
+2. Place Beewolf.ps1 into path:
+
+        (Invoke-WebRequest -URI "https://raw.githubusercontent.com/JoustingZebra/Project-Beewolf/main/Beewolf.ps1").Content > Beewolf.ps1
+
+Usage:
+
+```.\Beewolf.ps1```
 
 ## Disclaimer / Warning
 All the contents of this repository should be used for authorized and/or educational purposes only. Any misuse of this repository will not be the responsibility of the author or of any other collaborator.
@@ -35,4 +49,4 @@ Credit to [enigma0x3](https://web.archive.org/web/20210924173309/https://enigma0
 
 Credit to [Jonas L](https://web.archive.org/web/20210822093858/https://twitter.com/jonasLyk/status/1417205166172950531) for discovering the vuln.
 ## License
-GPL-3.0
+[GPL-3.0](https://github.com/Operational-Sciences-Group/Project-Beewolf/blob/main/LICENSE)
