@@ -1,5 +1,5 @@
-# Beewolf
-#### OSG Readme.md Template
+# Project-Beewolf
+#### SAM extraction via powershell
 ![GitHub top language](https://img.shields.io/github/languages/top/Operational-Sciences-Group/Project-birddog?label=PowerShell&logo=powershell&style=plastic)
 ![Version](https://img.shields.io/badge/Version-1.0-sucess?style=plastic)
 ![GitHub issues](https://img.shields.io/github/issues/Operational-Sciences-Group/Prussian-Red?logo=Github&style=plastic)
