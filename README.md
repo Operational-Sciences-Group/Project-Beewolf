@@ -1,9 +1,9 @@
 # Project-Beewolf
 #### SAM extraction via PowerShell
-![GitHub top language](https://img.shields.io/github/languages/top/Operational-Sciences-Group/Project-birddog?label=PowerShell&logo=powershell&style=plastic)
+![GitHub top language](https://img.shields.io/github/languages/top/Operational-Sciences-Group/Project-Beewolf?label=PowerShell&logo=powershell&style=plastic)
 ![Version](https://img.shields.io/badge/Version-1.0-sucess?style=plastic)
-![GitHub issues](https://img.shields.io/github/issues/Operational-Sciences-Group/Prussian-Red?logo=Github&style=plastic)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Operational-Sciences-Group/Project-Birddog?style=plastic)
+![GitHub issues](https://img.shields.io/github/issues/Operational-Sciences-Group/Project-Beewolf?logo=Github&style=plastic)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Operational-Sciences-Group/Project-Beewolf?style=plastic)
 
 
 Beewolf is a PowerShell (Version 7/5/2) script that exploits the HiveNightmare (aka SeriousSAM) vulnerability [CVE-2021-36934](https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2021-36934)
@@ -21,11 +21,10 @@ Beewolf is a PowerShell (Version 7/5/2) script that exploits the HiveNightmare (
 Beewolf copies the Windows [Security Account Manager](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc756748(v=ws.10)?redirectedfrom=MSDN) database to $env:PUBLIC (or another filepath) for your viewing pleasure. It works by creating symbolic links to a shadowcopy of the SAM, and preforming slight of hand with variables.
 
 It has been tested on the following versions of Windows:
-- Windows 10 Pro.    10.0.19043.0 (Major.Minor.Build.Revision)
+- Windows 10 Pro.    10.0.19043.0 (Major.Minor.Build.Revision) (We anticipate it will work on Windows 11 also)
 - Windows 8.1 Enterprise.    6.3.9600.0 (Major.Minor.Build.Revision)
 - Windows 7 Enterprise Service Pack 1.   6.1.7601.65536 (Major.Minor.Build.Revision)
 - Windows Server 2019 Build 17763.rs5_release.180914-1434
-- We anticipate it will work on Windows 11. 
 
 Here is the concept of operation:
 
