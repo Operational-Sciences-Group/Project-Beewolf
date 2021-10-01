@@ -4,12 +4,6 @@
 # Powershell V 7/5/2
 # This script exploits HiveNightmare/SeriousSAM (CVE-2021-36934) to copy the SAM database to an accessible location.
 
-#Known working:
-
-# Windows 10 Pro.    10.0.19043.0 (Major.Minor.Build.Revision)
-# Windows 8.1 Enterprise.    6.3.9600.0 (Major.Minor.Build.Revision)
-# Windows 7 Enterprise Service Pack 1.   6.1.7601.65536 (Major.Minor.Build.Revision)
-
 
 #                             ( | / )
 #     |SAM|                 \\ \|/,' __
@@ -19,7 +13,7 @@
 # ______\ ________________________________
 
 # The below modification will probably need to be made if running on versions prior to Windows 10. 
-# Line #22 can be removed if version 2 is inaccessible. Comment-out line #51 and un-comment line #52 if you remove line #22.
+# Line #17 can be removed if version 2 is inaccessible. Comment-out line #46 and un-comment line #47 if you remove line #17.
 #Requires -Version 2.0
 
 # If current user belongs to built-in Admins group execute payload directly
