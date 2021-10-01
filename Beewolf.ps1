@@ -4,6 +4,14 @@
 # Powershell V 7/5/2
 # This script exploits HiveNightmare/SeriousSAM (CVE-2021-36934) to copy the SAM database to an accessible location.
 
+#                             ( | / )
+#     |SAM|                 \\ \|/,' __
+#     \_o_/                 (")(_)-"()))=-~
+#        )                     <\\
+#       /\__
+# ______\ ________________________________
+
+
 # Line #8 can be removed if version 2 is inaccessible. Comment-out line #38 and un-comment line #39 if you remove line #8.
 #Requires -Version 2.0
 
