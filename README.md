@@ -24,6 +24,7 @@ It has been tested on the following versions of Windows:
 - Windows 10 Pro.    10.0.19043.0 (Major.Minor.Build.Revision)
 - Windows 8.1 Enterprise.    6.3.9600.0 (Major.Minor.Build.Revision)
 - Windows 7 Enterprise Service Pack 1.   6.1.7601.65536 (Major.Minor.Build.Revision)
+- Windows Server 2019 Build 17763.rs5_release.180914-1434
 - We anticipate it will work on Windows 11. 
 
 Here is the concept of operation:
