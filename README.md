@@ -1,5 +1,5 @@
 # Project-Beewolf
-#### SAM extraction via powershell
+#### SAM extraction via PowerShell
 ![GitHub top language](https://img.shields.io/github/languages/top/Operational-Sciences-Group/Project-birddog?label=PowerShell&logo=powershell&style=plastic)
 ![Version](https://img.shields.io/badge/Version-1.0-sucess?style=plastic)
 ![GitHub issues](https://img.shields.io/github/issues/Operational-Sciences-Group/Prussian-Red?logo=Github&style=plastic)
@@ -18,7 +18,15 @@ Beewolf is a PowerShell (Version 7/5/2) script that exploits the HiveNightmare (
 
 ## About
 
-Beewolf copies the Windows 10 (other versions untested) [Security Account Manager](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc756748(v=ws.10)?redirectedfrom=MSDN) database to $env:PUBLIC (or another filepath) for your viewing pleasure. It does so by using symbolic links and some slight of hand with variables. They say a picture is worth a thousand words.
+Beewolf copies the Windows [Security Account Manager](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc756748(v=ws.10)?redirectedfrom=MSDN) database to $env:PUBLIC (or another filepath) for your viewing pleasure. It works by creating symbolic links to a shadowcopy of the SAM, and preforming slight of hand with variables.
+
+It has been tested on the following versions of Windows:
+- Windows 10 Pro.    10.0.19043.0 (Major.Minor.Build.Revision)
+- Windows 8.1 Enterprise.    6.3.9600.0 (Major.Minor.Build.Revision)
+- Windows 7 Enterprise Service Pack 1.   6.1.7601.65536 (Major.Minor.Build.Revision)
+- We anticipate it will work on Windows 11. 
+
+Here is the concept of operation:
 
 <a href="https://ibb.co/rGZCdZH"><img src="https://i.ibb.co/4Zj61jp/image.jpg" alt="image" border="0"></a>
 
@@ -34,11 +42,12 @@ Installation:
 
 2. Place Beewolf.ps1 into path:
 
-        (Invoke-WebRequest -URI "https://raw.githubusercontent.com/JoustingZebra/Project-Beewolf/main/Beewolf.ps1").Content > Beewolf.ps1
+        (Invoke-WebRequest -URI "https://raw.githubusercontent.com/Operational-Sciences-Group/Project-Beewolf/main/Beewolf.ps1").Content > Beewolf.ps1
 
 Usage:
 
 ```.\Beewolf.ps1```
+
 
 ## Disclaimer / Warning
 All the contents of this repository should be used for authorized and/or educational purposes only. Any misuse of this repository will not be the responsibility of the author or of any other collaborator.
