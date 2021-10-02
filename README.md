@@ -18,13 +18,13 @@ Beewolf is a PowerShell (Version 7/5/2) script that exploits the HiveNightmare (
 
 ## About
 
-Beewolf copies the Windows [Security Account Manager](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc756748(v=ws.10)?redirectedfrom=MSDN) database to $env:PUBLIC (or another filepath) for your viewing pleasure. It works by creating symbolic links to a shadowcopy of the SAM, and preforming slight of hand with variables.
+Beewolf copies the Windows [Security Account Manager](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc756748(v=ws.10)?redirectedfrom=MSDN) database to $env:PUBLIC (or another filepath) for your viewing pleasure. It works by creating symbolic links to a shadowcopy of the SAM, and preforming sleight of hand with variables. There's a task in Windows [Task Scheduler](https://docs.microsoft.com/en-us/windows/win32/taskschd/about-the-task-scheduler) called "SilentCleanup" which automatically runs with elevated privileges, even when called from a non-privileged user. When not invoked by an adminstrator, Beewolf creates a new Registry Key "HKCU:\Environment\windir" in order to change the %windir% variable (normally pointing to C:\Windows) value to the command we want to be run as admin, in this case "powershell -ep bypass -w hidden $PSCommandPath;#"
 
 It has been tested on the following versions of Windows:
 - Windows 10 Pro.    10.0.19043.0 (Major.Minor.Build.Revision) (We anticipate it will work on Windows 11 also)
+- Windows Server 2019 Build 17763.rs5_release.180914-1434
 - Windows 8.1 Enterprise.    6.3.9600.0 (Major.Minor.Build.Revision)
 - Windows 7 Enterprise Service Pack 1.   6.1.7601.65536 (Major.Minor.Build.Revision)
-- Windows Server 2019 Build 17763.rs5_release.180914-1434
 
 Here is the concept of operation:
 
