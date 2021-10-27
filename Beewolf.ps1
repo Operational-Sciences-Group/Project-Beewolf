@@ -13,7 +13,7 @@
 # ______\ ________________________________
 
 # The below modification will probably need to be made if running on versions prior to Windows 10. 
-# Line #17 can be removed if version 2 is inaccessible. Comment-out line #46 and un-comment line #47 if you remove line #17.
+# Line #17 can be removed if version 2 is inaccessible. Comment-out line #49 and un-comment line #50 if you remove line #17.
 #Requires -Version 2.0
 
 # If current user belongs to built-in Admins group execute payload directly
